@@ -34,7 +34,7 @@ nav#menu ul li a {
 
 /*************************** image arriere plan *****************************/
 .bread {
-  background-image: url("/assets/images/boulangerie.jpg");
+  background-image: url("./assets/images/boulangerie.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
