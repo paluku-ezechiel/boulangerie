@@ -144,7 +144,6 @@ a {
   white-space: nowrap;
 }
 
-
 /** TYPE D'AFFICHAGE */
 .block {
   display: block;
@@ -162,11 +161,11 @@ a {
   display: flex;
 }
 
-
 /*------------------*
 # Button
 *------------------*/
-.btn, button {
+.btn,
+button {
   display: inline-block;
   text-align: center;
   cursor: pointer;
@@ -181,13 +180,16 @@ a {
   background-color: #efefef;
   margin: 5px;
 }
-.btn.btn-medium, button.btn-medium {
+.btn.btn-medium,
+button.btn-medium {
   font-size: medium;
 }
-.btn.btn-large, button.btn-large {
+.btn.btn-large,
+button.btn-large {
   font-size: large;
 }
-.btn.btn-small, button.btn-small {
+.btn.btn-small,
+button.btn-small {
   font-size: small;
 }
 
@@ -823,27 +825,33 @@ a {
 /*-----------------------
 # FLEXBOX
 -------------------------*/
-.row, .flex {
+.row,
+.flex {
   display: flex;
 }
 
-.col-center, .aic {
+.col-center,
+.aic {
   align-items: center;
 }
 
-.row-center, .jcc {
+.row-center,
+.jcc {
   justify-content: center;
 }
 
-.row-sb, .jcsb {
+.row-sb,
+.jcsb {
   justify-content: space-between;
 }
 
-.row-sa, .jcsa {
+.row-sa,
+.jcsa {
   justify-content: space-around;
 }
 
-.row-se, .jcse {
+.row-se,
+.jcse {
   justify-content: space-evenly;
 }
 
@@ -918,28 +926,56 @@ a {
   margin-left: auto;
 }
 
+/* Menu ambourger */
+.burger-icon::after {
+  content: "\002636";
+  float: left;
+  font-size: 40px;
+  padding: 10px 0 0 10px;
+  display: none;
+}
+
+.burger-icon:hover{
+  cursor: pointer;
+}
+
 @media (min-width: 576px) {
-  .container-sm, .container {
+  .container-sm,
+  .container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container {
+  .container-md,
+  .container-sm,
+  .container {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container {
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
     max-width: 1320px;
   }
 }

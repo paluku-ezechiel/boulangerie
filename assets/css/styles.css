@@ -5,6 +5,7 @@ nav {
   top: 0;
   background-color: white;
 }
+
 nav#menu ul {
   font-weight: bold;
   color: #003366;
@@ -16,13 +17,12 @@ nav#menu ul {
 
 nav#menu .logo img {
   width: 150px;
-  padding-left: 50px;
+  /* padding-left: 50px; */
 }
 
 nav#menu ul li a:hover {
   background-color: black;
   color: white;
-  /* border-bottom: 2px solid #ccc; */
 }
 
 nav#menu ul li a {
@@ -192,7 +192,6 @@ section:nth-child(2) {
   color: white;
   margin: auto;
   font-weight: bold;
-  /* padding-bottom: 10px; */
 }
 
 /************************* MEDIA ****************************/
@@ -202,7 +201,6 @@ section:nth-child(2) {
   ul {
     flex-direction: column;
     width: 100%;
-    /* border-bottom: 2px solid #ccc; */
   }
 
   .bread {
@@ -213,5 +211,30 @@ section:nth-child(2) {
   .gallerie-items .gallerie-item {
     width: 95%;
     margin: auto;
+  }
+
+  nav#menu ul {
+    font-weight: bold;
+    color: #003366;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    padding-right: 0px;
+  }
+
+  .burger-icon::after {
+    content: "\002636";
+    float: left;
+    font-size: 40px;
+    padding: 10px 0 0 10px;
+    display: block;
+  }
+
+  nav#menu .logo, nav#menu ul li{
+    display: none;
+  }
+
+  .bread h2{
+    width: 95%;
   }
 }
