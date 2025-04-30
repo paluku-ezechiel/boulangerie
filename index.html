@@ -9,31 +9,35 @@
   </head>
   <body>
     <div class="burger-icon"></div>
-    <nav id="menu" class="flex aic jcsb">
-      <div class="logo">
-        <a href=""><img src="./assets/images/logo.jfif" alt="" /></a>
+    <div class="nav-container">
+      <div class="container">
+        <nav id="menu" class="flex aic jcsb">
+            <div class="logo">
+              <a href=""><img src="./assets/images/logo.jfif" alt="" /></a>
+            </div>
+          <ul class="unlisted flex gap-15 jcc">
+            <!-- <li class="liste-item">
+              <a href="#" class="p20 block burger-icon"></a>
+            </li> -->
+            <li class="liste-item">
+              <a href="#">Accueil</a>
+            </li>
+            <li class="liste-item">
+              <a href="#">Produits</a>
+            </li>
+            <li class="liste-item">
+              <a href="#">Galerie</a>
+            </li>
+            <li class="liste-item">
+              <a href="#">Services</a>
+            </li>
+            <li class="liste-item">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <ul class="unlisted flex gap-15 jcc">
-        <!-- <li class="liste-item">
-          <a href="#" class="p20 block burger-icon"></a>
-        </li> -->
-        <li class="liste-item">
-          <a href="#">Accueil</a>
-        </li>
-        <li class="liste-item">
-          <a href="#">Produits</a>
-        </li>
-        <li class="liste-item">
-          <a href="#">Galerie</a>
-        </li>
-        <li class="liste-item">
-          <a href="#">Services</a>
-        </li>
-        <li class="liste-item">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
+    </div>
     <section class="bread-section">
       <div class="bread">
         <h2>Bienvenue dans notre Boulangerie Best quality</h2>
@@ -259,7 +263,7 @@
     <section>
       <div id="app">
         <h1>Nos contact</h1>
-        <div class="container flex gap-20 jcc" id="form-contact">
+        <div class="container flex gap-20 jcsb" id="form-contact">
           <div class="form-contact">
             <form action="">
               <div class="form-row">
@@ -284,7 +288,7 @@
             <div class="contact-title">
               <h2>Contactez-nous</h2>
             </div>
-            <div class="calls flex gap-10">
+            <div class="calls flex gap-10 aic">
               <i class="fa-solid fa-phone-volume"></i>
               Appelle nous
             </div>

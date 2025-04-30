@@ -1,4 +1,4 @@
-nav {
+.nav-container {
   box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 5px 8px 0 rgb(0 0 0 / 14%),
     0 1px 14px 0 rgb(0 0 0 / 12%);
   position: sticky;
@@ -32,6 +32,7 @@ nav#menu ul li a {
   padding: 10px;
   white-space: nowrap;
   font-size: 1rem;
+  transition: all 750ms;
 }
 
 /*************************** image arriere plan *****************************/
@@ -39,17 +40,15 @@ nav#menu ul li a {
   background-image: url(../images/boulangerie.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 600px;
   background-position-x: center;
   display: flex;
   align-items: center;
-  font-family: "Montserrat:ital";
 }
 
-.bread-section{
-  padding: 0!important;
+.bread-section {
+  padding: 0 !important;
 }
-
 
 .bread h2 {
   color: white;
@@ -58,15 +57,14 @@ nav#menu ul li a {
   text-align: center;
   margin: 0 auto;
   text-transform: uppercase;
+  font-family: "Montserrat:ital";
 }
-
-
 
 /**************************PRODUIT ********************************/
 
 section.container-prod {
   background-color: #efefef;
-  height: 70vh;
+  /* height: 70vh; */
 }
 
 .produit {
@@ -83,6 +81,12 @@ section.container-prod {
 
 .produit .produits_pains .big-image img {
   width: 100%;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.produit .produits_pains .big-image img:hover {
+  transform: scale(1.1);
 }
 
 .title h2 {
@@ -114,7 +118,7 @@ section h1 {
   margin: auto;
 }
 
-.container h1{
+.container h1 {
   padding-bottom: 50px;
 }
 
@@ -122,7 +126,8 @@ section h1 {
 .gallerie-items .gallerie-item {
   width: 400px;
   height: 400px;
-  margin-left: 25px;
+  transition: all 1s;
+  /* margin-left: 25px; */
   background-color: #ccc;
   border-radius: 10px;
   overflow: hidden;
@@ -130,7 +135,7 @@ section h1 {
 
 .gallerie-items .gallerie-item:hover {
   box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -143,19 +148,22 @@ section h1 {
 }
 
 /************************* COMMANDE *************************/
-
+.commande-items {
+  flex-wrap: wrap;
+}
 .commande-items .commande-item {
-  width: 450px;
-  height: 520px;
+  width: 400px;
+  height: 500px;
   margin-left: 20px;
-  /* overflow-x: hidden; */
-  /* background-color: black; */
-  border: 1px solid red;
+  border: 1px solid chocolate;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 1s;
+  /* margin: 0 auto; */
 }
 
 .commande-items .commande-item:hover {
-  background-color: black;
-  color: white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .commande-items .commande-item img {
@@ -186,7 +194,7 @@ section h1 {
 
 section {
   padding-bottom: 100px;
-  padding-top:100px
+  padding-top: 100px;
 }
 
 /*=========================== CONTACTS ==================================*/
@@ -236,7 +244,7 @@ section {
 .icon-adress i {
   font-size: 1.2rem;
   color: goldenrod;
-  margin: 15px;
+  margin: 10px;
 }
 
 .number-phone,
@@ -255,23 +263,11 @@ section {
   color: #ccc;
 }
 
-/************************* MEDIA ****************************/
-
-@media screen and (min-width: 500px) and (max-width: 912px) {
-  .produit .produits_pains {
-    width: 95%;
-    height: inherit;
-  }
-
-  section.container-prod {
-    /* background-color: #efefef; */
-    height: 170vh;
-  }
-
-  .para_text p {
-    font-size: 1.5rem;
-  }
+#form-contact {
+  flex-wrap: wrap;
 }
+
+/************************* MEDIA ****************************/
 
 @media screen and (max-width: 500px) {
   nav#menu,
