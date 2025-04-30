@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boulangerie Artisanale</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="burger-icon"></div>
     <nav id="menu" class="flex aic jcsb">
       <div class="logo">
-        <img src="./assets/images/logo.jfif" alt="" />
+        <a href=""><img src="./assets/images/logo.jfif" alt="" /></a>
       </div>
       <ul class="unlisted flex gap-15 jcc">
         <!-- <li class="liste-item">
@@ -33,59 +34,67 @@
         </li>
       </ul>
     </nav>
-    <section>
+    <section class="bread-section">
       <div class="bread">
         <h2>Bienvenue dans notre Boulangerie Best quality</h2>
       </div>
     </section>
+
     <section class="container-prod">
       <div class="container">
         <h1>Nos produits</h1>
-        <div class="produit flex gap-20 jcc">
-          <div class="pains">
-            <h2>Pains</h2>
+        <div class="produit flex gap-45 jcc">
+          <div class="produits_pains">
             <div class="big-image">
               <img
-                src="./assets/images/Pain-de-levain.avif"
+                src="./assets/images/premium_photo.avif"
                 width="100%"
                 alt=""
               />
             </div>
-            <div class="text">
-              <p>Pain de levain</p>
+            <div class="title">
+              <h2>Pain de levain</h2>
+            </div>
+            <div class="para_text">
+              <p>Le levain naturel diminue l'index glycémique du pain, et permet une meilleure utilisation des glucides. De plus, sa faible teneur en gluten le rend plus facile à digérer.</p>
             </div>
           </div>
-          <div class="pains">
-            <h2>Viennoiseries</h2>
+          <div class="produits_pains">
             <div class="big-image">
-              <img src="./assets/images/Chausson-aux-pommes.avif" alt="" />
+              <img
+                src="./assets/images/vienoiserie.avif"
+                width="100%"
+                alt=""
+              />
             </div>
-            <div class="text">
-              <p>Chausson aux pommes</p>
+            <div class="title">
+              <h2>Viennoiseries</h2>
+            </div>
+            <div class="para_text">
+              <p>Elles sont fabriquées avec des ingrédients de base à savoir des produits bruts (lait, par exemple), ou des produits qui ont subi une 1ère transformation (poudre de lait).</p>
             </div>
           </div>
-          <div class="pains">
-            <h2>patisseries</h2>
+          <div class="produits_pains">
             <div class="big-image">
-              <img src="./assets/images/tarte.jpg" alt="" />
+              <img
+                src="./assets/images/patisserie.avif"
+                width="100%"
+                alt=""
+              />
             </div>
-            <div class="text">
-              <p>Tartes</p>
+            <div class="title">
+              <h2>patisseries</h2>
             </div>
-          </div>
-          <div class="pains">
-            <h2>Produits spéciaux</h2>
-            <div class="big-image">
-              <img src="./assets/images/pain-de-paques.jpg" alt="" />
-            </div>
-            <div class="text">
-              <p>Chausson aux pommes</p>
+            <div class="para_text">
+              <p>Un Pain classique ou « Pain courant » de qualité Il doit être de forme régulière, bien développée, mais sans excès.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section>
+
+    <section >
+
       <div class="container">
         <h1>Galleries</h1>
         <div class="gallerie-items flex jcc gap-20">
@@ -97,10 +106,7 @@
                 alt=""
               />
             </div>
-            <!-- <div class="overlay">
-              <p>Pain de campagne</p>
-            </div> -->
-          </div>
+          </div> 
           <div class="gallerie-item">
             <div class="image-item">
               <img
@@ -109,9 +115,6 @@
                 alt=""
               />
             </div>
-            <!-- <div class="overlay">
-              <p>pain de mie</p>
-            </div> -->
           </div>
           <div class="gallerie-item">
             <div class="image-item">
@@ -121,9 +124,6 @@
                 alt=""
               />
             </div>
-            <!-- <div class="overlay">
-              <p>baguette de pain</p>
-            </div> -->
           </div>
           <div class="gallerie-item">
             <div class="image-item">
@@ -133,9 +133,6 @@
                 alt=""
               />
             </div>
-            <!-- <div class="overlay">
-              <p>Pains Croissants</p>
-            </div> -->
           </div>
           <div class="gallerie-item">
             <div class="image-item">
@@ -145,9 +142,6 @@
                 alt=""
               />
             </div>
-            <!-- <div class="overlay">
-              <p>pains au chocolat</p>
-            </div> -->
           </div>
           <div class="gallerie-item">
             <div class="image-item">
@@ -157,9 +151,6 @@
                 alt=""
               />
             </div>
-            <!-- <div class="overlay">
-              <p>Pains éclairs</p>
-            </div> -->
           </div>
           <div class="gallerie-item">
             <div class="image-item">
@@ -168,12 +159,9 @@
                 width="100%"
                 alt=""
               />
-            </div>
-            <!-- <div class="overlay">
-              <p>Brioche</p>
-            </div> -->
+            </div> 
           </div>
-          <div class="gallerie-item">
+           <div class="gallerie-item">
             <div class="image-item">
               <img
                 src="./assets/images/pexels-farhad-5713769.jpg"
@@ -181,11 +169,8 @@
                 alt=""
               />
             </div>
-            <!-- <div class="overlay">
-              <p>pains sucrés</p>
-            </div> -->
-          </div>
-          <div class="gallerie-item">
+          </div> 
+           <div class="gallerie-item">
             <div class="image-item">
               <img
                 src="./assets/images/pexels-natan-machado-fotografia-gastronomica-162809799-15010292.jpg"
@@ -193,22 +178,19 @@
                 alt=""
               />
             </div>
-            <!-- <div class="overlay">
-              <p>galettes des rois</p>
-            </div> -->
           </div>
-        </div>
-      </div>
     </section>
-    <section>
+    
+    
+    <section> 
       <div class="container">
-        <h2>SERVICES</h2>
+        <h1>SERVICES</h1>
         <div class="container-service">
-          <div class="commande-items">
+          <div class="commande-items flex">
             <div class="commande-item">
               <div class="commande-image">
                 <img
-                  src="./assets/images/roberto-cortese-ejhjSZKTeeg-unsplash.jpg"
+                  src="./assets/images/commande_en_ligne.avif"
                   width="100%"
                   alt=""
                 />
@@ -223,14 +205,107 @@
                 </p>
               </div>
               <div class="btn-commande">
-                <button class="btn-submit-commande" type="submit">
-                  COMMANDER
-                </button>
+                <button class="btn-submit-commande">commander</button>
               </div>
             </div>
+            <div class="commande-item">
+              <div class="commande-image">
+                <img
+                  src="./assets/images/commande_en_ligne.avif"
+                  width="100%"
+                  alt=""
+                />
+              </div>
+              <div class="commande-title">
+                <h3>Commandez en ligne</h3>
+              </div>
+              <div class="commande-texte">
+                <p>
+                  Commandez en ligne et faites-vous livrer à domicile rapidement
+                  et facilement.
+                </p>
+              </div>
+              <div class="btn-commande">
+                <button class="btn-submit-commande">commander</button>
+              </div>
+            </div>
+            <div class="commande-item">
+              <div class="commande-image">
+                <img
+                  src="./assets/images/commande_en_ligne.avif"
+                  width="100%"
+                  alt=""
+                />
+              </div>
+              <div class="commande-title">
+                <h3>Commandez en ligne</h3>
+              </div>
+              <div class="commande-texte">
+                <p>
+                  Commandez en ligne et faites-vous livrer à domicile rapidement
+                  et facilement.
+                </p>
+              </div>
+              <div class="btn-commande">
+                <button class="btn-submit-commande">commander</button>
+              </div>
+            </div>
+            
           </div>
-          <div class="livraison">Livraison</div>
         </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="app">
+        <h1>Nos contact</h1>
+        <div class="container flex gap-20 jcc" id="form-contact">
+          <div class="form-contact">
+            <form action="">
+              <div class="form-row">
+                <input type="text" name="firstname" placeholder="Votre nom">
+              </div>
+              <div class="form-row">
+                <input type="text" name="lastname" placeholder="votre post-nom">
+              </div>
+              <div class="form-row">
+                <input type="email" name="email" placeholder="Votre email">
+              </div>
+              <div class="form-row">
+                <input type="text" name="objet" placeholder="Votre objet">
+              </div>
+              <div class="form-row">
+                <textarea name="message" id="message" placeholder="Votre Message" cols="53" rows="5"></textarea>
+              </div>
+              <button class="submit">Envoyer</button>
+            </form>
+          </div>
+          <div class="contactez-nous">
+            <div class="contact-title">
+              <h2>Contactez-nous</h2>
+            </div>
+            <div class="calls flex gap-10">
+              <i class="fa-solid fa-phone-volume"></i>
+              Appelle nous
+            </div>
+            <div class="number-phone">
+              +243 994947712
+            </div>
+            <div class="calls flex gap-10 aic">
+              <i class="fa-solid fa-envelope-open-text"></i>
+               Notre email
+            </div>
+            <div class="email">
+              palukuezechiel@gmail.com
+            </div>
+
+            <div class="icon-adress">
+              <i class="fa-solid fa-location-dot"></i>
+                Q. Les volcans, Av. Des Ibis, Goma
+            </div>
+          </div>
+          
+        </div> 
       </div>
     </section>
     <script src="./js/function.js"></script>

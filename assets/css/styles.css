@@ -4,6 +4,7 @@ nav {
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 9999;
 }
 
 nav#menu ul {
@@ -16,13 +17,14 @@ nav#menu ul {
 }
 
 nav#menu .logo img {
-  width: 150px;
-  /* padding-left: 50px; */
+  width: 80px;
 }
 
 nav#menu ul li a:hover {
-  background-color: black;
+  background-color: #003366;
   color: white;
+  border-radius: 5px;
+  /* transition: margin-right 2s ease-in-out; */
 }
 
 nav#menu ul li a {
@@ -34,59 +36,77 @@ nav#menu ul li a {
 
 /*************************** image arriere plan *****************************/
 .bread {
-  /* background-image: url("./assets/images/boulangerie.jpg"); */
   background-image: url(../images/boulangerie.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
   background-position-x: center;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat:ital";
 }
+
+.bread-section{
+  padding: 0!important;
+}
+
 
 .bread h2 {
   color: white;
-  font-size: 1.5rem;
-  padding: 20px;
+  font-size: 3rem;
   width: 530px;
   text-align: center;
   margin: 0 auto;
   text-transform: uppercase;
 }
 
+
+
 /**************************PRODUIT ********************************/
+
+section.container-prod {
+  background-color: #efefef;
+  height: 70vh;
+}
+
+.produit {
+  flex-wrap: wrap;
+}
+
+.produit .produits_pains {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.produit .produits_pains .big-image img {
+  width: 100%;
+}
+
+.title h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Montserrat:ital";
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.para_text {
+  font-family: "Montserrat:ital";
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+}
 
 section h1 {
   text-align: center;
   font-size: 2rem;
   padding-top: 20px;
   text-transform: uppercase;
-}
-.produit .pains {
-  width: 300px;
-  background-color: white;
-  border-radius: 10px;
-  /* border: 1px solid #ccc; */
-}
-
-.produit .pains:hover {
-  box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.pains h2 {
-  text-align: center;
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.big-image img {
-  width: 100%;
-}
-
-.text p {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 2px;
-  /* color: #ccc; */
+  font-family: "Tagesschrift";
 }
 
 .container .produit {
@@ -94,23 +114,16 @@ section h1 {
   margin: auto;
 }
 
-section:nth-child(1) {
-  background-color: #ccc;
+.container h1{
+  padding-bottom: 50px;
 }
-section:nth-child(2) {
-  background-color: #ccc;
-}
-
-/* section {
-  background-color: #ccc;
-} */
 
 /********************************Gallery *******************************/
 .gallerie-items .gallerie-item {
   width: 400px;
+  height: 400px;
   margin-left: 25px;
   background-color: #ccc;
-  /* box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.2); */
   border-radius: 10px;
   overflow: hidden;
 }
@@ -123,7 +136,6 @@ section:nth-child(2) {
 
 .gallerie-item img {
   width: 100%;
-  height: 400px;
 }
 
 .gallerie-items {
@@ -132,71 +144,136 @@ section:nth-child(2) {
 
 /************************* COMMANDE *************************/
 
-.container-service {
-  height: 50vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "commande livraison";
-  /* grid-gap: 50px; */
-}
-
-.commande-item {
-  background-color: #ccc;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.2);
-}
-.commande {
-  background-color: brown;
-  grid-area: commande;
-}
-
-.livraison {
-  background-color: orange;
-  grid-area: livraison;
-}
-
 .commande-items .commande-item {
-  width: 550px;
+  width: 450px;
+  height: 520px;
+  margin-left: 20px;
+  /* overflow-x: hidden; */
+  /* background-color: black; */
+  border: 1px solid red;
 }
 
-.commande-image img {
+.commande-items .commande-item:hover {
+  background-color: black;
+  color: white;
+}
+
+.commande-items .commande-item img {
   width: 100%;
-  height: 500px;
-}
-
-.container h2 {
-  text-align: center;
-  padding-top: 20px;
 }
 
 .commande-title h3 {
   text-align: center;
-  padding-top: 10px;
+  padding: 10px 0;
+  font-size: 1.5rem;
   margin-bottom: 0;
 }
 
 .commande-texte p {
+  text-align: center;
   font-size: 1rem;
-  text-align: justify;
-  margin-top: 7px;
-  padding: 10px;
 }
 
-.btn-commande button {
+.btn-commande .btn-submit-commande {
   display: block;
+  margin: 0 auto;
   border: none;
   padding: 10px;
-  border-radius: 10px;
-  background-color: blue;
+  text-transform: uppercase;
+  background-color: green;
   color: white;
-  margin: auto;
+}
+
+section {
+  padding-bottom: 100px;
+  padding-top:100px
+}
+
+/*=========================== CONTACTS ==================================*/
+
+#app {
+  background-color: white;
+  width: 100%;
+  height: 60vh;
+}
+
+.form-row {
+  margin: 10px 0;
+}
+
+.form-row input {
+  width: 400px;
+  height: 40px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: larger;
+}
+
+.form-row textarea {
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.contact-title h2 {
+  font-size: 1rem;
+  color: goldenrod;
+}
+
+.getTouch h2 {
+  font-size: 1.3rem;
+}
+
+.touchPara p {
+  font-size: 0.9rem;
+  font-family: "Tagesschrift";
+}
+
+.calls i,
+.icon-adress i {
+  font-size: 1.2rem;
+  color: goldenrod;
+  margin: 15px;
+}
+
+.number-phone,
+.email {
+  margin-bottom: 5px;
+  margin-left: 25px;
   font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.submit {
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: chocolate;
+  color: #ccc;
 }
 
 /************************* MEDIA ****************************/
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 500px) and (max-width: 912px) {
+  .produit .produits_pains {
+    width: 95%;
+    height: inherit;
+  }
+
+  section.container-prod {
+    /* background-color: #efefef; */
+    height: 170vh;
+  }
+
+  .para_text p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
   nav#menu,
   ul {
     flex-direction: column;
@@ -208,10 +285,19 @@ section:nth-child(2) {
     width: 95%;
   }
 
-  .gallerie-items .gallerie-item {
+  section.container-prod {
+    /* background-color: #efefef; */
+    height: 200vh;
+  }
+
+  .produit .produits_pains {
+    width: 95%;
+  }
+
+  /* .gallerie-items .gallerie-item {
     width: 95%;
     margin: auto;
-  }
+  } */
 
   nav#menu ul {
     font-weight: bold;
@@ -230,11 +316,25 @@ section:nth-child(2) {
     display: block;
   }
 
-  nav#menu .logo, nav#menu ul li{
+  nav#menu .logo,
+  nav#menu ul li {
     display: none;
   }
 
-  .bread h2{
+  .bread h2 {
     width: 95%;
+    font-size: 2rem;
   }
 }
+
+/* @media screen and (max-width:375px) {
+  section.container-prod {
+    height: 200vh;
+  }
+}
+
+@media screen and (max-width:540px) {
+  section.container-prod {
+    height: 200vh;
+  }
+} */
