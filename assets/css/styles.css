@@ -64,7 +64,8 @@ nav#menu ul li a {
 
 section.container-prod {
   background-color: #efefef;
-  /* height: 70vh; */
+  height: 70vh;
+  width: 100vw;
 }
 
 .produit {
@@ -72,8 +73,8 @@ section.container-prod {
 }
 
 .produit .produits_pains {
-  width: 400px;
-  height: 400px;
+  width: 30%;
+  height: 55vh;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -124,8 +125,8 @@ section h1 {
 
 /********************************Gallery *******************************/
 .gallerie-items .gallerie-item {
-  width: 400px;
-  height: 400px;
+  width: 30%;
+  height: 50vh;
   transition: all 1s;
   /* margin-left: 25px; */
   background-color: #ccc;
@@ -152,14 +153,14 @@ section h1 {
   flex-wrap: wrap;
 }
 .commande-items .commande-item {
-  width: 400px;
-  height: 500px;
+  width: 30%;
+  height: 65vh;
   margin-left: 20px;
   border: 1px solid chocolate;
   border-radius: 15px;
   overflow: hidden;
   transition: all 1s;
-  /* margin: 0 auto; */
+  margin: 10px auto;
 }
 
 .commande-items .commande-item:hover {
@@ -265,11 +266,35 @@ section {
 
 #form-contact {
   flex-wrap: wrap;
+  margin-left: 20px;
 }
 
 /************************* MEDIA ****************************/
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+  .commande-items .commande-item {
+    width: 95%;
+  }
 
-@media screen and (max-width: 500px) {
+  .gallerie-items .gallerie-item {
+    width: 95%;
+  }
+
+  .produit .produits_pains{
+    width: 95%;
+    height: 70vh;
+  }
+
+  .produit .produits_pains .para_text p{
+    font-size: 1.7rem;
+  }
+
+  section.container-prod {
+    height: 210vh;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
   nav#menu,
   ul {
     flex-direction: column;
@@ -282,18 +307,17 @@ section {
   }
 
   section.container-prod {
-    /* background-color: #efefef; */
-    height: 200vh;
+    background-color: #efefef;
+    height: 180vh;
   }
 
   .produit .produits_pains {
     width: 95%;
   }
 
-  /* .gallerie-items .gallerie-item {
+  .gallerie-items .gallerie-item {
     width: 95%;
-    margin: auto;
-  } */
+  }
 
   nav#menu ul {
     font-weight: bold;
@@ -321,16 +345,34 @@ section {
     width: 95%;
     font-size: 2rem;
   }
-}
 
-/* @media screen and (max-width:375px) {
-  section.container-prod {
-    height: 200vh;
+  .commande-items .commande-item {
+    width: 95%;
+  }
+
+  .form-row input,
+  textarea {
+    width: 85%;
+  }
+
+  #form-contact {
+    margin-left: 20px;
+  }
+
+  .produit .produits_pains {
+    height: 59vh;
+  }
+
+  .produits_pains .para_text{
+    font-size: 1.1rem;
+  }
+
+  .commande-items .commande-item{
+    height: 67vh;
+  }
+
+  .commande-items .commande-item .commande-texte p{
+    font-size: 1.1rem;
   }
 }
 
-@media screen and (max-width:540px) {
-  section.container-prod {
-    height: 200vh;
-  }
-} */
