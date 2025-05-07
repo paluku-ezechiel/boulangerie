@@ -1,3 +1,5 @@
+/* HEADER */
+/*==========*/
 .nav-container {
   box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 5px 8px 0 rgb(0 0 0 / 14%),
     0 1px 14px 0 rgb(0 0 0 / 12%);
@@ -54,6 +56,9 @@ nav.header-nav ul li a {
   transition: all 500ms;
   border-radius: 5px;
 }
+
+/* FIN HEADER */
+/* ============================= */
 
 /*************************** image arriere plan *****************************/
 .bread {
@@ -312,15 +317,19 @@ form {
   flex-direction: column;
 }
 
-.burger-icon::after {
-  content: "\002636";
-  font-size: 20px;
-  background-color: white;
-  display: block;
-  position: absolute;
-  top: 1px;
-  display: none;
-  /* left: 95%; */
+
+/**============================ FOOTER ==========================**/
+
+footer {
+  background-color: black;
+  padding: 40px 0;
+  color: white;
+  text-align: center;
+}
+
+.container-footer {
+  max-width: 1000px;
+  margin: auto;
 }
 
 /************************* MEDIA ****************************/
@@ -415,6 +424,7 @@ form {
 
   nav.header-nav {
     background-color: white;
+    display: none;
   }
 
   .container {
@@ -471,16 +481,4 @@ form {
   }
 }
 
-/**============================ FOOTER ==========================**/
 
-footer {
-  background-color: black;
-  padding: 40px 0;
-  color: white;
-  text-align: center;
-}
-
-.container-footer {
-  max-width: 1000px;
-  margin: auto;
-}
