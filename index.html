@@ -9,42 +9,46 @@
   </head>
   <body>
     <div class="nav-container">
-      <div class="burger-icon"></div>
+      <!-- <div class="burger-icon"></div> -->
       <div class="container">
-        <nav id="menu" class="flex aic jcsb">
-            <div class="logo">
-              <a href=""><img src="./assets/images/logo.jfif" alt="" /></a>
-            </div>
-          <ul class="unlisted flex gap-15 jcc">
-            <!-- <li class="liste-item">
-              <a href="#" class="p20 block burger-icon"></a>
-            </li> -->
-            <li class="liste-item">
-              <a href="#">Accueil</a>
-            </li>
-            <li class="liste-item">
-              <a href="#">Produits</a>
-            </li>
-            <li class="liste-item">
-              <a href="#">Galerie</a>
-            </li>
-            <li class="liste-item">
-              <a href="#">Services</a>
-            </li>
-            <li class="liste-item">
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
+        <header class="navBar flex aic jcsb">
+          <div class="logo">
+            <a href="#accueil"><img src="./assets/images/logo.jfif" alt="" /></a>
+          </div>
+          <div class="burger-icon"></div>
+          <nav class="header-nav flex">
+            <ul class="unlisted flex gap-15">
+              <!-- <li class="liste-item">
+                <a href="#" class="p20 block burger-icon"></a>
+              </li> -->
+              <li class="liste-item">
+                <a href="#accueil">Accueil</a>
+              </li>
+              <li class="liste-item">
+                <a href="#produit">Produits</a>
+              </li>
+              <li class="liste-item">
+                <a href="#gallerie">Galerie</a>
+              </li>
+              <li class="liste-item">
+                <a href="#service">Services</a>
+              </li>
+              <li class="liste-item">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- <div class="burger-icon"></div> -->
+        </header>
       </div>
     </div>
-    <section class="bread-section">
+    <section class="bread-section" id="accueil">
       <div class="bread">
         <h2>Bienvenue dans notre Boulangerie Best quality</h2>
       </div>
     </section>
 
-    <section class="container-prod">
+    <section class="container-prod" id="produit">
       <div class="container">
         <h1>Nos produits</h1>
         <div class="produit flex gap-45 jcc">
@@ -97,7 +101,7 @@
       </div>
     </section>
 
-    <section >
+    <section id="gallerie">
       <div class="container">
         <h1>Galleries</h1>
         <div class="gallerie-items flex jcc gap-20">
@@ -185,7 +189,7 @@
     </section>
     
     
-    <section> 
+    <section class="service-container" id="service"> 
       <div class="container">
         <h1>SERVICES</h1>
         <div class="container-service">
@@ -259,11 +263,11 @@
       </div>
     </section>
 
-    <section>
+    <section id="contact">
       <div class="container">
         <h1>Nos contact</h1>
-        <div class="app flex gap-20 jcsb" id="form-contact">
-          <div class="form-contact">
+        <div class="app flex gap-100" id="form-contact">
+          <div class="form-contact flex-2">
             <form action="">
               <div class="form-row">
                 <input type="text" name="firstname" placeholder="Votre nom">
@@ -283,7 +287,7 @@
               <button class="submit">Envoyer</button>
             </form>
           </div>
-          <div class="contactez-nous">
+          <div class="contactez-nous flex-1">
             <div class="contact-title">
               <h2>Contactez-nous</h2>
             </div>
@@ -307,16 +311,15 @@
                 Q. Les volcans, Av. Des Ibis, Goma
             </div>
           </div>
-          
         </div> 
       </div>
     </section>
     <footer>
   <div class="container-footer">
     <h3>Boulangerie Best Quality</h3>
-    <p>Votre artisan boulanger depuis 1995</p>
+    <!-- <p>Votre artisan boulanger depuis 1995</p> -->
 
-    <div style="margin: 20px 0;">
+    <!-- <div style="margin: 20px 0;">
       <p><strong>Adresse :</strong> 10A Av des Ibis,  Goma, Nord-Kivu</p>
       <p><strong>Téléphone :</strong> 0850078352</p>
       <p><strong>Email :</strong> contact@bestquality.fr</p>
@@ -326,7 +329,7 @@
       <p><strong>Horaires d'ouverture :</strong></p>
       <p>Lundi - Samedi : 7h00 - 19h30</p>
       <p>Dimanche : 8h00 - 13h00</p>
-    </div>
+    </div> -->
 
     <div style="margin: 20px 0;">
       <a href="https://facebook.com" target="_blank" style="margin: 0 10px;">Facebook</a>

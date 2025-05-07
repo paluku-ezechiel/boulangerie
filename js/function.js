@@ -1,21 +1,21 @@
-var burgerIcon  = document.querySelector('.burger-icon');
-var navLogo     = document.querySelector('nav#menu .logo');
-var listes      = document.querySelectorAll('nav#menu ul li');
+// let burgerIcon = document.querySelector("div.burger-icon");
+// let nav = document.querySelector("nav.header-nav");
 
 var listenerFunction = {
-    openNav : () => {
-        navLogo.style.display = 'block';
-        for (let index = 0; index < listes.length; index++) {
-            const elt = listes[index];
-            elt.style.display = 'block';
-        }
-    },
+  openNav: () => {
+    // nav.style.display = "block";
+  }
 
-    closeNav : () => {
-        burgerIcon.style.display = 'none'
-    }
-}
+  // closeNav: () => {
+  //   nav.style.display = "none";
+  // },
+};
 
 var setupListener = () => {
-        burgerIcon.addEventListener('mouseover', listenerFunction.openNav);
-    }
+  // burgerIcon.addEventListener("mouseover", listenerFunction.openNav);
+  // nav.addEventListener("mouseleave", listenerFunction.closeNav);
+  // for (let index = 0; index < listes.length; index++) {
+  //   const liste = listes[index];
+  //   liste.addEventListener("click", listenerFunction.closeNav);
+  // }
+};

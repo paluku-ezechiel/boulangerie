@@ -5,34 +5,54 @@
   top: 0;
   background-color: white;
   z-index: 9999;
+  scroll-behavior: smooth;
 }
 
-nav#menu ul {
+/* nav.header-nav {
+  position: absolute;
+  top: -13px;
+  background-color: black;
+  left: 700px;
+  padding-top: 40px;
+} */
+
+nav.header-nav ul {
   font-weight: bold;
   color: #003366;
   cursor: pointer;
   text-transform: uppercase;
   text-align: center;
-  padding-right: 50px;
 }
 
-nav#menu .logo img {
+.navBar {
+  background-color: white;
+  height: 90px;
+  /* position: fixed;
+  position: 1px;
+  z-index: 9999;
+  width: 100%; */
+}
+
+.logo {
   width: 80px;
+  height: 80px;
+}
+.logo img {
+  width: 100%;
 }
 
-nav#menu ul li a:hover {
+nav.header-nav ul li a:hover {
   background-color: #003366;
   color: white;
-  border-radius: 5px;
-  /* transition: margin-right 2s ease-in-out; */
 }
 
-nav#menu ul li a {
+nav.header-nav ul li a {
   display: block;
-  padding: 10px;
+  padding: 5px;
   white-space: nowrap;
   font-size: 1rem;
-  transition: all 750ms;
+  transition: all 500ms;
+  border-radius: 5px;
 }
 
 /*************************** image arriere plan *****************************/
@@ -120,7 +140,7 @@ section h1 {
 }
 
 .container h1 {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 /********************************Gallery *******************************/
@@ -128,7 +148,6 @@ section h1 {
   width: 30%;
   height: 50vh;
   transition: all 1s;
-  /* margin-left: 25px; */
   background-color: #ccc;
   border-radius: 10px;
   overflow: hidden;
@@ -154,17 +173,17 @@ section h1 {
 }
 .commande-items .commande-item {
   width: 30%;
-  height: 67vh;
   margin-left: 20px;
   border: 1px solid chocolate;
   border-radius: 15px;
   overflow: hidden;
-  transition: all 1s;
+  transition: all 750ms;
   margin: 10px auto;
+  background-color: white;
 }
 
 .commande-items .commande-item:hover {
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .commande-items .commande-item img {
@@ -181,16 +200,20 @@ section h1 {
 .commande-texte p {
   text-align: center;
   font-size: 1rem;
+  margin: 0;
 }
 
 .btn-commande .btn-submit-commande {
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
   border: none;
   padding: 10px;
   text-transform: uppercase;
-  background-color: black;
+  background-color: #003366;
+  font-weight: bold;
   color: white;
+  font-size: 1rem;
+  border-radius: 5px;
 }
 
 section {
@@ -198,12 +221,16 @@ section {
   padding-top: 100px;
 }
 
+.service-container {
+  background-color: rgba(210, 123, 30, 0.05);
+}
+
 /*=========================== CONTACTS ==================================*/
 
-#app {
+.app {
   background-color: white;
   width: 100%;
-  height: 60vh;
+  height: 55vh;
 }
 
 .form-row {
@@ -211,7 +238,7 @@ section {
 }
 
 .form-row input {
-  width: 400px;
+  width: 100%;
   height: 40px;
   outline: none;
   border: 1px solid #ccc;
@@ -225,6 +252,7 @@ section {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding-left: 10px;
+  width: 100%;
 }
 
 .contact-title h2 {
@@ -260,13 +288,39 @@ section {
   padding: 10px;
   font-size: 1.2rem;
   border: none;
-  background-color: chocolate;
-  color: #ccc;
+  background-color: #003366;
+  color: white;
+  width: fit-content;
+  margin: auto;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 #form-contact {
   flex-wrap: wrap;
   margin-left: 20px;
+  min-width: 60%;
+}
+
+.contactez-nous {
+  min-width: 30%;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.burger-icon::after {
+  content: "\002636";
+  font-size: 20px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  top: 1px;
+  display: none;
+  /* left: 95%; */
 }
 
 /************************* MEDIA ****************************/
@@ -279,12 +333,12 @@ section {
     width: 95%;
   }
 
-  .produit .produits_pains{
+  .produit .produits_pains {
     width: 95%;
     height: 70vh;
   }
 
-  .produit .produits_pains .para_text p{
+  .produit .produits_pains .para_text p {
     font-size: 1.7rem;
   }
 
@@ -292,10 +346,21 @@ section {
     height: 210vh;
   }
 
+  .contactez-nous {
+    display: none;
+  }
+
+  .form-row input {
+    width: 90%;
+  }
+
+  .form-row textarea {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 700px) {
-  nav#menu,
+  nav.header-nav,
   ul {
     flex-direction: column;
     width: 100%;
@@ -315,11 +380,16 @@ section {
     width: 95%;
   }
 
+  .logo {
+    position: fixed;
+    top: 1px;
+  }
+
   .gallerie-items .gallerie-item {
     width: 95%;
   }
 
-  nav#menu ul {
+  nav.header-nav {
     font-weight: bold;
     color: #003366;
     cursor: pointer;
@@ -330,15 +400,25 @@ section {
 
   .burger-icon::after {
     content: "\002636";
-    float: left;
-    font-size: 40px;
-    padding: 10px 0 0 10px;
+    font-size: 20px;
+    background-color: white;
     display: block;
+    position: fixed;
+    top: 1px;
+    left: 85%;
   }
 
-  nav#menu .logo,
-  nav#menu ul li {
-    display: none;
+  nav.header-nav {
+    display: block;
+    margin-top: 320px;
+  }
+
+  nav.header-nav {
+    background-color: white;
+  }
+
+  .container {
+    width: 100%;
   }
 
   .bread h2 {
@@ -350,8 +430,11 @@ section {
     width: 95%;
   }
 
-  .form-row input,
-  textarea {
+  .form-row input {
+    width: 85%;
+  }
+
+  .form-row textarea {
     width: 85%;
   }
 
@@ -360,31 +443,44 @@ section {
   }
 
   .produit .produits_pains {
-    height: 59vh;
+    height: 56vh;
   }
 
-  .produits_pains .para_text{
+  .produits_pains .para_text {
     font-size: 1.1rem;
   }
 
-  .commande-items .commande-item{
-    height: 67vh;
+  .commande-items .commande-item {
+    height: 73vh;
   }
 
-  .commande-items .commande-item .commande-texte p{
+  .commande-items .commande-item .commande-texte p {
     font-size: 1.1rem;
+  }
+
+  .contactez-nous {
+    display: none;
+  }
+
+  .container-footer h3 {
+    font-size: 1rem;
+  }
+
+  #form-contact {
+    min-width: 30%;
   }
 }
 
-footer{
+/**============================ FOOTER ==========================**/
+
+footer {
   background-color: black;
-  padding: 40px 0; 
+  padding: 40px 0;
   color: white;
   text-align: center;
 }
 
-.container-footer{
-  max-width: 1000px; 
+.container-footer {
+  max-width: 1000px;
   margin: auto;
 }
-

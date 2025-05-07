@@ -850,6 +850,10 @@ button.btn-small {
   justify-content: space-around;
 }
 
+.jce{
+  justify-content: end;
+}
+
 .row-se,
 .jcse {
   justify-content: space-evenly;
@@ -916,6 +920,12 @@ button.btn-small {
 }
 .gap-45 {
   gap: 45px;
+}
+.gap-50 {
+  gap: 50px;
+}
+.gap-100 {
+  gap: 100px;
 }
 
 /*------------------*
