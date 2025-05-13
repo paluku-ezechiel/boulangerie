@@ -7,6 +7,10 @@
   top: 0;
   background-color: white;
   z-index: 9999;
+  width: 100%;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -29,10 +33,7 @@ nav.header-nav ul {
 .navBar {
   background-color: white;
   height: 90px;
-  /* position: fixed;
-  position: 1px;
-  z-index: 9999;
-  width: 100%; */
+  width: 100%;
 }
 
 .logo {
@@ -87,22 +88,28 @@ nav.header-nav ul li a {
 
 /**************************PRODUIT ********************************/
 
-section.container-prod {
-  background-color: #efefef;
-  height: 70vh;
-  width: 100vw;
+.produits_pains {
+  height: 50%;
+  width: 30%;
+  overflow: hidden;
 }
 
-.produit {
-  flex-wrap: wrap;
+.big-image {
+  flex: 1;
+}
+
+.produits_pains .big-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+section.container-prod {
+  background-color: #efefef;
 }
 
 .produit .produits_pains {
-  width: 30%;
-  height: 55vh;
   background-color: white;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .produit .produits_pains .big-image img {
@@ -139,17 +146,27 @@ section h1 {
   font-family: "Tagesschrift";
 }
 
-.container .produit {
-  flex-wrap: wrap;
-  margin: auto;
-}
-
 .container h1 {
   padding-bottom: 100px;
 }
 
 /********************************Gallery *******************************/
-.gallerie-items .gallerie-item {
+.gallerie-items {
+  flex-wrap: wrap;
+}
+.gallerie-item {
+  height: 50%;
+  width: 30%;
+  object-fit: cover;
+}
+
+.gallerie-item .image-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* .gallerie-items .gallerie-item {
   width: 30%;
   height: 50vh;
   transition: all 1s;
@@ -170,10 +187,72 @@ section h1 {
 
 .gallerie-items {
   flex-wrap: wrap;
-}
+} */
 
 /************************* COMMANDE *************************/
-.commande-items {
+
+.commande-items .commande-item {
+  height: 50%;
+  width: 30%;
+  object-fit: cover;
+}
+
+.commande-item .commande-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.commande-items .commande-item {
+  /* width: 30%; */
+  /* margin-left: 20px; */
+  border: 1px solid chocolate;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 750ms;
+  margin: 10px auto;
+  background-color: white;
+}
+
+.commande-items .commande-item:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.commande-title h3 {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.commande-texte p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.btn-commande .btn-submit-commande {
+  display: block;
+  margin: 20px auto;
+  border: none;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: #003366;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.service-container {
+  background-color: rgba(210, 123, 30, 0.05);
+}
+
+section {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+/* .commande-items {
   flex-wrap: wrap;
 }
 .commande-items .commande-item {
@@ -228,11 +307,84 @@ section {
 
 .service-container {
   background-color: rgba(210, 123, 30, 0.05);
-}
+} */
 
 /*=========================== CONTACTS ==================================*/
 
 .app {
+  background-color: white;
+  /* width: 100%; */
+  /* height: 55vh; */
+}
+
+.form-row {
+  margin: 10px 0;
+}
+
+.form-row input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: larger;
+}
+
+.form-row textarea {
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.contact-title h2 {
+  font-size: 1rem;
+  color: goldenrod;
+}
+
+.getTouch h2 {
+  font-size: 1.3rem;
+}
+
+.touchPara p {
+  font-size: 0.9rem;
+  font-family: "Tagesschrift";
+}
+
+.touchPara p {
+  font-size: 0.9rem;
+  font-family: "Tagesschrift";
+}
+
+.calls i,
+.icon-adress i {
+  font-size: 1.2rem;
+  color: goldenrod;
+  margin: 10px;
+}
+
+.number-phone,
+.email {
+  margin-bottom: 5px;
+  margin-left: 25px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.submit {
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #003366;
+  color: white;
+  width: fit-content;
+  margin: auto;
+  border-radius: 5px;
+  font-weight: bold;
+}
+/* .app {
   background-color: white;
   width: 100%;
   height: 55vh;
@@ -315,8 +467,7 @@ form {
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-
+} */
 
 /**============================ FOOTER ==========================**/
 
@@ -330,7 +481,7 @@ footer {
 .container-footer {
   max-width: 1000px;
   margin: auto;
-}
+} 
 
 /************************* MEDIA ****************************/
 @media screen and (min-width: 701px) and (max-width: 1024px) {
@@ -342,9 +493,21 @@ footer {
     width: 95%;
   }
 
+  .produit{
+    flex-direction: column;
+  }
+
   .produit .produits_pains {
     width: 95%;
-    height: 70vh;
+    /* height: 70vh; */
+  }
+
+  .commande-items{
+    flex-direction: column;
+  }
+
+  .commande-title h3,.commande-texte p{
+    font-size: 1.5rem;
   }
 
   .produit .produits_pains .para_text p {
@@ -378,34 +541,66 @@ footer {
   .bread {
     margin: 0 auto;
     width: 95%;
+    box-sizing: border-box;
   }
 
-  section.container-prod {
-    background-color: #efefef;
-    height: 180vh;
+  .produit {
+    flex-direction: column;
   }
 
   .produit .produits_pains {
-    width: 95%;
+    width: 90%;
+    margin: 0 auto;
   }
+
+  /*************Gallerie****************/
+
+  .gallerie-items {
+    flex-direction: column;
+  }
+
+  .gallerie-item {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  /***********SERVICES*************/
+  .commande-items {
+    flex-direction: column;
+  }
+
+  .commande-items .commande-item {
+    width: 90%;
+  }
+
+  /* section.container-prod {
+    background-color: #efefef;
+    height: 180vh;
+  } */
+
+  /* .produit .produits_pains {
+    width: 95%;
+  } */
 
   .logo {
     position: fixed;
     top: 1px;
+    box-sizing: border-box;
   }
 
-  .gallerie-items .gallerie-item {
+  /* .gallerie-items .gallerie-item {
     width: 95%;
-  }
+  } */
 
-  nav.header-nav {
+  /* nav.header-nav {
     font-weight: bold;
     color: #003366;
     cursor: pointer;
     text-transform: uppercase;
     text-align: center;
     padding-right: 0px;
-  }
+    box-sizing: border-box;
+  } */
 
   .burger-icon::after {
     content: "\002636";
@@ -413,13 +608,16 @@ footer {
     background-color: white;
     display: block;
     position: fixed;
-    top: 1px;
+    top: 5px;
     left: 85%;
+    box-sizing: border-box;
   }
+
 
   nav.header-nav {
     display: block;
-    margin-top: 320px;
+    margin-top: 325px;
+    box-sizing: border-box;
   }
 
   nav.header-nav {
@@ -427,18 +625,18 @@ footer {
     display: none;
   }
 
-  .container {
+  /* .container {
     width: 100%;
-  }
+  } */
 
   .bread h2 {
     width: 95%;
     font-size: 2rem;
   }
 
-  .commande-items .commande-item {
+  /* .commande-items .commande-item {
     width: 95%;
-  }
+  } */
 
   .form-row input {
     width: 85%;
@@ -448,37 +646,42 @@ footer {
     width: 85%;
   }
 
+  #form-contact{
+    flex-direction:column ;
+    gap: 50;
+  }
+
+
   #form-contact {
     margin-left: 20px;
+    box-sizing: border-box;
   }
 
-  .produit .produits_pains {
+  /* .produit .produits_pains {
     height: 56vh;
-  }
+  } */
 
-  .produits_pains .para_text {
+  /* .produits_pains .para_text {
     font-size: 1.1rem;
-  }
+  } */
 
-  .commande-items .commande-item {
+  /* .commande-items .commande-item {
     height: 73vh;
-  }
+  } */
 
-  .commande-items .commande-item .commande-texte p {
+  /* .commande-items .commande-item .commande-texte p {
     font-size: 1.1rem;
-  }
+  } */
 
-  .contactez-nous {
+  /* .contactez-nous {
     display: none;
-  }
+  } */
 
   .container-footer h3 {
     font-size: 1rem;
-  }
+  } 
 
-  #form-contact {
+  /* #form-contact {
     min-width: 30%;
-  }
+  }  */
 }
-
-

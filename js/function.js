@@ -4,7 +4,7 @@ let nav = document.querySelector("nav.header-nav");
 var listenerFunction = {
   openNav: () => {
     nav.style.display = "block";
-  }
+  },
 
   // closeNav: () => {
   //   nav.style.display = "none";

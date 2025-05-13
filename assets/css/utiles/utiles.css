@@ -17,6 +17,8 @@ body {
   font-size: 14px;
   overflow-x: hidden;
   visibility: visible;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /*------------------*
